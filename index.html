@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <!-- LOGIN / REGISTER -->
+    <div id="auth-container" class="card auth-box hidden">
+        <h2>Đăng nhập</h2>
+        <input id="auth-email" type="mail" placeholder="Email">
+        <input id="auth-pass" type="password" placeholder="Mật khẩu">
+        <button id="btn-login">Đăng nhập</button>
+        <p>Chưa có tài khoản?
+            <span class="link" id="switch-register">Đăng ký</span>
+        </p>
+    </div>
+
+    <div id="register-container" class="card auth-box hidden">
+        <h2>Đăng ký</h2>
+        <input id="register-email" type="email" placeholder="Email">
+        <input id="register-pass" type="password" placeholder="Mật khẩu">
+        <button id="btn-register">Tạo tài khoản</button>
+        <p>Đã có tài khoản?
+            <span class="link" id="switch-login">Đăng nhập</span>
+    </div>
+
+    <!-- MAIN APP -->
+    <div id="app" class="">
+         <h1>Todo App</h1>
+         
+    <!-- FORM THÊM CÔNG VIỆC  -->
+    <div class="add-box card">
+        <input id="task-input" type="text" placeholder="Nhập công việc...">
+        <input id="deadline-input" type="datetime-local">
+        <button id="add-btn">Add</button>
+    </div>
+
+    <!-- LỌC CÔNG VIỆC -->
+    <div class="filter-box card">
+        <select id="filter">
+            <option value="all">Tất cả</option>
+            <option value="completed">Đã hoàn thành</option>
+            <option value="pending">Chưa hoàn thành</option>
+        </select>
+        <input type="date" id="filter-date">
+    </div>
+
+    <!-- DANH SÁCH CÔNG VIỆC -->
+    <div id="task-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
